@@ -5,7 +5,7 @@ from app.config import settings
 
 # One SQS client, reused. boto3 finds the instance's IAM role
 # automatically — no keys anywhere.
-_sqs = boto3.client("sqs", region_name = "us_west-2")
+_sqs = boto3.client("sqs", region_name = "us-west-2")
 
 def publish_note_created(note_id: int, content: str) -> None:
 
